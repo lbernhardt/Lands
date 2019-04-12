@@ -2,27 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.LoginPage"
-             Title="Login"
+             Title="Lands"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
-                Padding="10,20,10,5">
-                <Label 
-                    FontAttributes="Bold"
-                    FontSize="Large"
-                    HorizontalOptions="Center"
-                    Text="Lands"/>
+                Padding="5">
                 <Image 
                     Source="globe"
                     WidthRequest="150" />
-                <Grid>
+                <Grid
+                    Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <Label
                         Text="E-mail"
+                        VerticalOptions="Center"
                         Grid.Row="0"
                         Grid.Column="0">
                     </Label>
@@ -34,6 +31,7 @@
                     </Entry>
                     <Label
                         Text="Password"
+                        VerticalOptions="Center"
                         Grid.Row="1"
                         Grid.Column="0">            
                     </Label>
@@ -46,6 +44,7 @@
                 <ActivityIndicator>
                 </ActivityIndicator>
                 <StackLayout
+                    Margin="10,0"
                     Orientation="Horizontal">
                     <Label 
                         Text="Rememberme on this device"
@@ -62,20 +61,23 @@
                     TextColor="Blue">
                 </Label>
                 <StackLayout
+                    Orientation="Horizontal"
                     Margin="40,0">
                     <Button 
                         BackgroundColor="Navy"
                         Text="Login"
                         TextColor="White"
                         BorderRadius="23"
-                        HeightRequest="46">
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand">
                     </Button>
                     <Button 
                         BackgroundColor="Purple"
                         Text="Register"
                         TextColor="White"
                         BorderRadius="23"
-                        HeightRequest="46">
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand">
                     </Button>
                 </StackLayout>
                 <StackLayout
